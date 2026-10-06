@@ -2,6 +2,19 @@ function handleAstuHouseMessage_(m) {
   const text = normalizeText_(m.text);
   const state = getConversationState_(m.from);
 
+  if (state.stage === 'ASTU_CONFIRM_ALT') {
+    const ans = normalizeText_(m.text);
+    if (/^(si|sí|ok|dale|perfecto|me sirve|confirmo)$/.test(ans)) {
+      const start = new Date(Number(state.suggestedVisitTime));
+      setConversationState_(m.from, { stage: '' });
+      scheduleAstuHouseVisit_(m, start, state.productName || 'Producto');
+      return;
+    }
+    setConversationState_(m.from, { stage: 'ASTU_WAIT_VISIT_TIME' });
+    sendWhatsAppText_(m.from, 'Perfecto, dime qué otra hora te sirve.');
+    return;
+  }
+
   if (state.stage === 'ASTU_WAIT_VISIT_TIME') {
     const dt = parseVisitDateTime_(m.text);
     if (!dt) {
