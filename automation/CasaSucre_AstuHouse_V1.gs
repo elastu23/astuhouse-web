@@ -624,3 +624,13 @@ function runInternalTests_() {
   };
 }
 
+
+
+/* ===== FUNCIONES PÚBLICAS PARA EJECUCIÓN MANUAL EN APPS SCRIPT ===== */
+function setupBaseConfig() {
+  return setupBaseConfig_();
+}
+
+function runInternalTests() {
+  return runInternalTests_();
+}
