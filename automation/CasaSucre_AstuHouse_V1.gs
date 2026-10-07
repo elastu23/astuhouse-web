@@ -373,7 +373,7 @@ function parseVisitDateTime_(raw) {
   const d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   if (s.indexOf('manana') >= 0) d.setDate(d.getDate() + 1);
 
-  const m = s.match(/\b(\d{1,2})(?:[:\.](\d{2}))?\s*(am|pm)?\b/);
+  const m = s.match(/\b(\d{1,2})(?:(?:[:\.\s])(\d{2}))?\s*(am|pm)?\b/);
   if (!m) return null;
 
   let h = Number(m[1]);
