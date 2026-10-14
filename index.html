@@ -12,6 +12,7 @@
 <meta property="og:description" content="Compra tecnología seleccionada o cuéntanos qué equipo quieres vender. Cotizaciones y atención directa por WhatsApp.">
 <meta property="og:url" content="https://astuhouse.reto365.com.ec/">
 <link rel="canonical" href="https://astuhouse.reto365.com.ec/">
+<link rel="icon" type="image/png" href="assets/astuhouse-favicon.png">
 <title>AstuHouse | Compra y vende tecnología en Cuenca, Ecuador</title>
 <style>
 :root{--ink:#151c2b;--muted:#667082;--line:#e6e9ee;--bg:#f8f9fb;--white:#fff;--navy:#101827;--accent:#315dea;--tint:#edf2ff;--green:#177e68;--shadow:0 24px 72px rgba(22,34,57,.09)}
@@ -25,6 +26,21 @@ section.content-section{padding:96px 0}.section-top{display:flex;justify-content
 @media(max-width:560px){.container{width:calc(100% - 30px)}.topline{font-size:.73rem}.nav-inner{min-height:65px}.brand{font-size:1.32rem}.header-cta{font-size:.8rem;padding:8px 10px}.hero{padding:45px 0 25px}.hero h1{font-size:clamp(3.25rem,14vw,4.5rem)}.hero p.lead{font-size:1.01rem}.hero-actions .btn{flex:1 1 auto}.hero-stage{min-height:340px}.stage-glow{inset:15px 5px 0 15px;border-radius:32px}.device-laptop{width:78%;height:197px;top:105px;left:18%}.device-phone{width:110px;height:217px;top:58px;left:1%;border-width:5px;border-radius:22px}.device-phone .glass{border-radius:14px}.floater{padding:8px 10px;gap:7px;border-radius:12px}.floater.first{top:37px}.floater.second{bottom:10px}.floater strong{font-size:.74rem}.floater span{font-size:.63rem}.float-icon{width:29px;height:29px;border-radius:9px;font-size:.84rem}.facts{grid-template-columns:1fr;gap:12px;padding:20px 0}.fact{font-size:.84rem}section.content-section{padding:68px 0}.category-grid,.steps{grid-template-columns:1fr}.category{min-height:188px;padding:21px}.category .glyph{margin-bottom:16px}.form-card{padding:23px 18px;border-radius:22px}.form-grid{grid-template-columns:1fr;gap:15px}.field.full{grid-column:auto}.steps .step{min-height:unset}.detail{grid-template-columns:1fr;gap:3px}.callout .btn{white-space:normal;width:100%}.footer{padding-bottom:94px}.footer-bottom{flex-direction:column;gap:8px}.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:55;background:#fff;border-top:1px solid #dce2eb;padding:9px 14px max(9px,env(safe-area-inset-bottom));display:flex;gap:9px;box-shadow:0 -9px 24px rgba(16,24,39,.1)}.mobile-bar .btn{flex:1;padding:12px 5px;font-size:.85rem;border-radius:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.category{transition:none}}
 </style>
+<style>
+/* Adaptación cromática al logotipo oficial negro y blanco AstuHouse. */
+.nav{background:rgba(0,0,0,.97);border-bottom:1px solid #22252b}
+.brand{color:#fff}
+.brand img{width:202px;max-width:202px;height:auto;object-fit:contain;display:block}
+.nav-links{color:#f3f5fa}
+.nav-links a:hover{color:#a8c4ff}
+.header-cta{color:#fff;border-color:rgba(255,255,255,.75)}
+.header-cta:hover{background:#fff;color:#000}
+.mobile-trigger{color:#fff}
+.footer{background:#000}
+.footer .brand img{width:238px;max-width:238px}
+@media(max-width:800px){.nav-links{background:#000;color:#fff;border-bottom:1px solid #282828}}
+@media(max-width:560px){.brand img{width:156px;max-width:156px}.footer .brand img{width:215px;max-width:215px}}
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Store","name":"AstuHouse","url":"https://astuhouse.reto365.com.ec/","description":"Compra y venta de equipos tecnológicos en Cuenca, Ecuador. Consultas y cotizaciones por WhatsApp.","telephone":"+593962562983","address":{"@type":"PostalAddress","addressLocality":"Cuenca","addressRegion":"Azuay","addressCountry":"EC"},"areaServed":"Ecuador","sameAs":["https://www.instagram.com/astuhouse.ec/"]}
 </script>
@@ -35,7 +51,7 @@ section.content-section{padding:96px 0}.section-top{display:flex;justify-content
 <header class="nav">
   <div class="container nav-inner">
     <!-- El logo oficial se incorpora como assets/logo-astuhouse.png; el texto mantiene la marca visible mientras tanto. -->
-    <a href="#inicio" class="brand" aria-label="AstuHouse, inicio"><img id="official-logo" src="assets/logo-astuhouse.png" alt="Logo oficial de AstuHouse" hidden><span class="brand-text">astu<span style="color:var(--accent)">house</span><span style="color:var(--accent)">.</span></span></a>
+    <a href="#inicio" class="brand" aria-label="AstuHouse, inicio"><img id="official-logo" src="assets/logo-astuhouse-header.png" alt="Logo oficial de AstuHouse" hidden><span class="brand-text">astu<span style="color:var(--accent)">house</span><span style="color:var(--accent)">.</span></span></a>
     <nav class="nav-links" id="nav-links" aria-label="Menú principal"><a href="#comprar">Comprar</a><a href="#vender">Vender mi equipo</a><a href="#proceso">Cómo funciona</a><a href="#nosotros">Nosotros</a><a href="https://wa.me/593962562983?text=Hola%20AstuHouse%2C%20tengo%20una%20consulta" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></nav>
     <a class="header-cta" href="#vender">Véndenos tu tecnología →</a>
     <button class="mobile-trigger" id="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
@@ -168,7 +184,7 @@ section.content-section{padding:96px 0}.section-top{display:flex;justify-content
 </main>
 <footer class="footer">
   <div class="container"><div class="footer-main">
-    <div><a class="brand" href="#inicio">astuhouse<span style="color:#89aaff">.</span></a><p>Compra y venta de tecnología desde Cuenca, Ecuador. Atención directa con información clara y coordinación por WhatsApp.</p></div>
+    <div><a class="brand" href="#inicio" aria-label="AstuHouse, volver al inicio"><img src="assets/logo-astuhouse-header.png" alt="AstuHouse" width="238" height="62" loading="lazy"></a><p>Compra y venta de tecnología desde Cuenca, Ecuador. Atención directa con información clara y coordinación por WhatsApp.</p></div>
     <nav aria-label="Enlaces del pie" class="footer-links"><a href="#comprar">Comprar</a><a href="#vender">Vender</a><a href="#preguntas">Preguntas</a><a href="privacidad.html">Privacidad</a><a href="eliminacion-datos.html">Eliminar datos</a><a href="https://www.instagram.com/astuhouse.ec/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></nav>
   </div><div class="footer-bottom"><span>© 2026 AstuHouse · Cuenca, Ecuador</span><span>Atención directa · Sin promesas de cotización automática</span></div></div>
 </footer>
