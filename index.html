@@ -191,8 +191,7 @@ section.content-section{padding:96px 0}.section-top{display:flex;justify-content
   function value(id){return document.getElementById(id).value.trim().replace(/[\r\n]+/g," ").slice(0,420);}
   function openWhatsApp(lines){
     var url="https://wa.me/593962562983?text="+encodeURIComponent(lines.filter(Boolean).join("\n"));
-    var w=window.open(url,"_blank","noopener,noreferrer");
-    if(!w){window.location.href=url;}
+    window.location.href=url;
   }
   document.getElementById("buy-form").addEventListener("submit",function(ev){
     ev.preventDefault();if(!ev.currentTarget.reportValidity())return;
